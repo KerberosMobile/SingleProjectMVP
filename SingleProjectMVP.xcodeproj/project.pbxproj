@@ -8,12 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		118347F61D7C57E000E34F39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118347F51D7C57E000E34F39 /* AppDelegate.swift */; };
-		118347F81D7C57E000E34F39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118347F71D7C57E000E34F39 /* ViewController.swift */; };
 		118347FB1D7C57E000E34F39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 118347F91D7C57E000E34F39 /* Main.storyboard */; };
 		118347FD1D7C57E100E34F39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 118347FC1D7C57E100E34F39 /* Assets.xcassets */; };
 		118348001D7C57E100E34F39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 118347FE1D7C57E100E34F39 /* LaunchScreen.storyboard */; };
 		1183480B1D7C57E100E34F39 /* SingleProjectMVPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1183480A1D7C57E100E34F39 /* SingleProjectMVPTests.swift */; };
 		118348161D7C57E100E34F39 /* SingleProjectMVPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118348151D7C57E100E34F39 /* SingleProjectMVPUITests.swift */; };
+		118348241D7C609B00E34F39 /* Tab_1_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118348231D7C609B00E34F39 /* Tab_1_VC.swift */; };
+		118348271D7C611000E34F39 /* Tab_2_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118348261D7C611000E34F39 /* Tab_2_VC.swift */; };
+		118348291D7C612700E34F39 /* Tab_3_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118348281D7C612700E34F39 /* Tab_3_VC.swift */; };
+		1183482B1D7C616A00E34F39 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1183482A1D7C616900E34F39 /* MapKit.framework */; };
+		1183482D1D7C631000E34F39 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1183482C1D7C631000E34F39 /* CoreLocation.framework */; };
+		118348371D7C64B000E34F39 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118348361D7C64B000E34F39 /* UserInfo.swift */; };
+		1183483F1D7C66D700E34F39 /* BackgroundTaskManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1183483A1D7C66D700E34F39 /* BackgroundTaskManager.m */; };
+		118348401D7C66D700E34F39 /* LocationShareModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1183483C1D7C66D700E34F39 /* LocationShareModel.m */; };
+		118348411D7C66D700E34F39 /* LocationTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1183483E1D7C66D700E34F39 /* LocationTracker.m */; };
+		118348431D7C674F00E34F39 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 118348421D7C674F00E34F39 /* libsqlite3.tbd */; };
+		118348481D7CBE0100E34F39 /* DateTimeList.db in Resources */ = {isa = PBXBuildFile; fileRef = 118348471D7CBE0100E34F39 /* DateTimeList.db */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +46,6 @@
 /* Begin PBXFileReference section */
 		118347F21D7C57E000E34F39 /* SingleProjectMVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SingleProjectMVP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		118347F51D7C57E000E34F39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		118347F71D7C57E000E34F39 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		118347FA1D7C57E000E34F39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		118347FC1D7C57E100E34F39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		118347FF1D7C57E100E34F39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +56,21 @@
 		118348111D7C57E100E34F39 /* SingleProjectMVPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SingleProjectMVPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		118348151D7C57E100E34F39 /* SingleProjectMVPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleProjectMVPUITests.swift; sourceTree = "<group>"; };
 		118348171D7C57E100E34F39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		118348231D7C609B00E34F39 /* Tab_1_VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tab_1_VC.swift; path = class/controller/Tab_1_VC.swift; sourceTree = "<group>"; };
+		118348261D7C611000E34F39 /* Tab_2_VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tab_2_VC.swift; path = class/controller/Tab_2_VC.swift; sourceTree = "<group>"; };
+		118348281D7C612700E34F39 /* Tab_3_VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tab_3_VC.swift; path = class/controller/Tab_3_VC.swift; sourceTree = "<group>"; };
+		1183482A1D7C616900E34F39 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		1183482C1D7C631000E34F39 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		118348361D7C64B000E34F39 /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserInfo.swift; path = class/common/UserInfo.swift; sourceTree = "<group>"; };
+		118348381D7C66D600E34F39 /* SingleProjectMVP-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SingleProjectMVP-Bridging-Header.h"; sourceTree = "<group>"; };
+		118348391D7C66D700E34F39 /* BackgroundTaskManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BackgroundTaskManager.h; path = "class/background task/BackgroundTaskManager.h"; sourceTree = "<group>"; };
+		1183483A1D7C66D700E34F39 /* BackgroundTaskManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BackgroundTaskManager.m; path = "class/background task/BackgroundTaskManager.m"; sourceTree = "<group>"; };
+		1183483B1D7C66D700E34F39 /* LocationShareModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationShareModel.h; path = "class/background task/LocationShareModel.h"; sourceTree = "<group>"; };
+		1183483C1D7C66D700E34F39 /* LocationShareModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationShareModel.m; path = "class/background task/LocationShareModel.m"; sourceTree = "<group>"; };
+		1183483D1D7C66D700E34F39 /* LocationTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationTracker.h; path = "class/background task/LocationTracker.h"; sourceTree = "<group>"; };
+		1183483E1D7C66D700E34F39 /* LocationTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationTracker.m; path = "class/background task/LocationTracker.m"; sourceTree = "<group>"; };
+		118348421D7C674F00E34F39 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		118348471D7CBE0100E34F39 /* DateTimeList.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = DateTimeList.db; path = resource/DateTimeList.db; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +78,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				118348431D7C674F00E34F39 /* libsqlite3.tbd in Frameworks */,
+				1183482D1D7C631000E34F39 /* CoreLocation.framework in Frameworks */,
+				1183482B1D7C616A00E34F39 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +104,9 @@
 		118347E91D7C57DF00E34F39 = {
 			isa = PBXGroup;
 			children = (
+				118348421D7C674F00E34F39 /* libsqlite3.tbd */,
+				1183482C1D7C631000E34F39 /* CoreLocation.framework */,
+				1183482A1D7C616900E34F39 /* MapKit.framework */,
 				118347F41D7C57E000E34F39 /* SingleProjectMVP */,
 				118348091D7C57E100E34F39 /* SingleProjectMVPTests */,
 				118348141D7C57E100E34F39 /* SingleProjectMVPUITests */,
@@ -97,9 +127,12 @@
 		118347F41D7C57E000E34F39 /* SingleProjectMVP */ = {
 			isa = PBXGroup;
 			children = (
-				118347F51D7C57E000E34F39 /* AppDelegate.swift */,
-				118347F71D7C57E000E34F39 /* ViewController.swift */,
+				118348441D7CBABC00E34F39 /* resource */,
+				118348351D7C646500E34F39 /* common */,
+				1183482E1D7C632800E34F39 /* custom background task */,
+				118348251D7C60D400E34F39 /* Controllers */,
 				118347F91D7C57E000E34F39 /* Main.storyboard */,
+				118347F51D7C57E000E34F39 /* AppDelegate.swift */,
 				118347FC1D7C57E100E34F39 /* Assets.xcassets */,
 				118347FE1D7C57E100E34F39 /* LaunchScreen.storyboard */,
 				118348011D7C57E100E34F39 /* Info.plist */,
@@ -123,6 +156,46 @@
 				118348171D7C57E100E34F39 /* Info.plist */,
 			);
 			path = SingleProjectMVPUITests;
+			sourceTree = "<group>";
+		};
+		118348251D7C60D400E34F39 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				118348231D7C609B00E34F39 /* Tab_1_VC.swift */,
+				118348261D7C611000E34F39 /* Tab_2_VC.swift */,
+				118348281D7C612700E34F39 /* Tab_3_VC.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		1183482E1D7C632800E34F39 /* custom background task */ = {
+			isa = PBXGroup;
+			children = (
+				118348391D7C66D700E34F39 /* BackgroundTaskManager.h */,
+				1183483A1D7C66D700E34F39 /* BackgroundTaskManager.m */,
+				1183483B1D7C66D700E34F39 /* LocationShareModel.h */,
+				1183483C1D7C66D700E34F39 /* LocationShareModel.m */,
+				1183483D1D7C66D700E34F39 /* LocationTracker.h */,
+				1183483E1D7C66D700E34F39 /* LocationTracker.m */,
+				118348381D7C66D600E34F39 /* SingleProjectMVP-Bridging-Header.h */,
+			);
+			name = "custom background task";
+			sourceTree = "<group>";
+		};
+		118348351D7C646500E34F39 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				118348361D7C64B000E34F39 /* UserInfo.swift */,
+			);
+			name = common;
+			sourceTree = "<group>";
+		};
+		118348441D7CBABC00E34F39 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				118348471D7CBE0100E34F39 /* DateTimeList.db */,
+			);
+			name = resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +266,11 @@
 				TargetAttributes = {
 					118347F11D7C57E000E34F39 = {
 						CreatedOnToolsVersion = 7.3;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					118348051D7C57E100E34F39 = {
 						CreatedOnToolsVersion = 7.3;
@@ -229,6 +307,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				118348481D7CBE0100E34F39 /* DateTimeList.db in Resources */,
 				118348001D7C57E100E34F39 /* LaunchScreen.storyboard in Resources */,
 				118347FD1D7C57E100E34F39 /* Assets.xcassets in Resources */,
 				118347FB1D7C57E000E34F39 /* Main.storyboard in Resources */,
@@ -256,7 +335,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				118347F81D7C57E000E34F39 /* ViewController.swift in Sources */,
+				118348271D7C611000E34F39 /* Tab_2_VC.swift in Sources */,
+				118348411D7C66D700E34F39 /* LocationTracker.m in Sources */,
+				118348371D7C64B000E34F39 /* UserInfo.swift in Sources */,
+				118348241D7C609B00E34F39 /* Tab_1_VC.swift in Sources */,
+				118348291D7C612700E34F39 /* Tab_3_VC.swift in Sources */,
+				1183483F1D7C66D700E34F39 /* BackgroundTaskManager.m in Sources */,
+				118348401D7C66D700E34F39 /* LocationShareModel.m in Sources */,
 				118347F61D7C57E000E34F39 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,10 +486,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SingleProjectMVP/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mayank.SingleProjectMVP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SingleProjectMVP/SingleProjectMVP-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -412,10 +501,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SingleProjectMVP/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mayank.SingleProjectMVP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SingleProjectMVP/SingleProjectMVP-Bridging-Header.h";
 			};
 			name = Release;
 		};
