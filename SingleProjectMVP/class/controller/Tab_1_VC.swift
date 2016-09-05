@@ -134,7 +134,7 @@ class Tab_1_VC: UIViewController, LocationTrackerDelegate, MKMapViewDelegate {
                     placeMark = placeArray?[0]
                     
                     print(placeMark.addressDictionary)
-                    self.InsertFile()
+//                    self.InsertFile()
                     self.lbl_address.text = "\((placeMark.addressDictionary!["Thoroughfare"])!), \((placeMark.addressDictionary!["City"])!)"
                 }
                 
