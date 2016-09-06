@@ -19,7 +19,7 @@ class UserInfo: NSObject {
     
     var completedDate = NSMutableArray()
     var sqliteDataPath : String!
-    
+        
     class var getInstance : UserInfo
     {
         struct Static{

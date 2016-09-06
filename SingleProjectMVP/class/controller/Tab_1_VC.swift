@@ -15,6 +15,8 @@ class Tab_1_VC: UIViewController, LocationTrackerDelegate, MKMapViewDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var lbl_address: UILabel!
+    @IBOutlet weak var lbl_distance: UILabel!
+    
     
     var curLocationManager : LocationTracker!
     var usrInfo = UserInfo.getInstance
@@ -44,6 +46,10 @@ class Tab_1_VC: UIViewController, LocationTrackerDelegate, MKMapViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    }
     
     func appWillForeground() {
         if UIApplication.sharedApplication().applicationIconBadgeNumber == 1 {
@@ -53,14 +59,13 @@ class Tab_1_VC: UIViewController, LocationTrackerDelegate, MKMapViewDelegate {
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default,    handler:{(action:UIAlertAction) in
                 self.usrInfo.curLocation = nil
                 self.usrInfo.distance = 0
-                self.curLocationManager.startLocationTracking()
+//                self.curLocationManager.startLocationTracking()
             }))
             self.presentViewController(alert, animated: true, completion: nil)
         }
     }
     
     func showAlaert() {
-        self.curLocationManager.stopLocationTracking()
         
         if UIApplication.sharedApplication().applicationState == .Active
         {
@@ -68,7 +73,10 @@ class Tab_1_VC: UIViewController, LocationTrackerDelegate, MKMapViewDelegate {
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default,    handler:{(action:UIAlertAction) in
                 self.usrInfo.curLocation = nil
                 self.usrInfo.distance = 0
-                self.curLocationManager.startLocationTracking()
+                
+                // test
+                self.lbl_distance.text = "\(self.usrInfo.distance)"
+//                self.curLocationManager.startLocationTracking()
             }))
             self.presentViewController(alert, animated: true, completion: nil)
         }
@@ -134,17 +142,16 @@ class Tab_1_VC: UIViewController, LocationTrackerDelegate, MKMapViewDelegate {
                     placeMark = placeArray?[0]
                     
                     print(placeMark.addressDictionary)
-//                    self.InsertFile()
-                    self.lbl_address.text = "\((placeMark.addressDictionary!["Thoroughfare"])!), \((placeMark.addressDictionary!["City"])!)"
+                    self.lbl_address.text = "\((placeMark.addressDictionary!["Thoroughfare"])!), \((placeMark.addressDictionary!["City"])!)"  //
+                } else {
+                    self.geoCodeResqust = false
                 }
                 
             })
         }
-        
-
-        
-        
     }
+    
+    
     func locationTracker(tracker: LocationTracker!, didUpdatedLocations lastLocation: CLLocation!) {
         
         let geoCoderRequestMeters = 10.0
@@ -155,8 +162,12 @@ class Tab_1_VC: UIViewController, LocationTrackerDelegate, MKMapViewDelegate {
         
         usrInfo.desLocation = lastLocation
         
+        print(usrInfo.curLocation)
+        print(lastLocation)
+        
         let distanceMeter = usrInfo.desLocation.distanceFromLocation(usrInfo.curLocation)
         usrInfo.distance = distanceMeter
+        self.lbl_distance.text = "\(distanceMeter)"
         
         NSNotificationCenter.defaultCenter().postNotificationName("refreshDistance", object: nil, userInfo: nil)
         
@@ -177,13 +188,17 @@ class Tab_1_VC: UIViewController, LocationTrackerDelegate, MKMapViewDelegate {
                     print(placeMark.addressDictionary)
                     
                     self.lbl_address.text = "\((placeMark.addressDictionary!["Thoroughfare"])!), \((placeMark.addressDictionary!["City"])!)"
+                } else {
+                    self.geoCodeResqust = false
                 }
                 
             })
         }
         
         if distanceMeter > 50.0 {
-            NSNotificationCenter.defaultCenter().postNotificationName("TravelCompletedAlarm", object: nil, userInfo: nil)
+//            NSNotificationCenter.defaultCenter().postNotificationName("TravelCompletedAlarm", object: nil, userInfo: nil)
+            
+            self.showAlaert()
             
             self.InsertFile()
             NSNotificationCenter.defaultCenter().postNotificationName("TravelCompletList", object: nil, userInfo: nil)
@@ -192,7 +207,7 @@ class Tab_1_VC: UIViewController, LocationTrackerDelegate, MKMapViewDelegate {
     
     // Delegatge MapView
     func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
-        let region : MKCoordinateRegion = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 500, 500)
+        let region : MKCoordinateRegion = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 1000, 1000)
         self.mapView.setRegion(self.mapView.regionThatFits(region), animated: true)
     }
 

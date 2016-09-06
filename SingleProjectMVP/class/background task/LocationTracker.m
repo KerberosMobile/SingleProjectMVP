@@ -324,11 +324,11 @@
     
     NSLog(@"Send to Server: Latitude(%f) Longitude(%f) Accuracy(%f)",self.myLocation.coordinate.latitude, self.myLocation.coordinate.longitude,self.myLocationAccuracy);
     
-    double distanceMeters = 1.0f;
+    double distanceMeters = 1.0f; //1.0
     if (self.prevLocation != nil)
     {
         distanceMeters = [self.myLocation distanceFromLocation:self.prevLocation];
-        if (distanceMeters > 6.0f)
+        if (distanceMeters > 5.0f)
         {
             //in case moving now
             [_delegate locationTracker:self didUpdatedLocations:self.myLocation];
