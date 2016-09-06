@@ -92,7 +92,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if sqlite3_open(dbPath.cStringUsingEncoding(NSUTF8StringEncoding)!, &mySqliteDB) == SQLITE_OK {
             if sqlite3_prepare_v2(mySqliteDB, sql.cStringUsingEncoding(NSUTF8StringEncoding)!, -1, &statemnet, nil) == SQLITE_OK {
                 while sqlite3_step(statemnet) == SQLITE_ROW {
-                    let date   = String.fromCString(UnsafePointer<CChar>(sqlite3_column_text(statemnet, 1)))!
+                    let date   = String.fromCString(UnsafePointer<CChar>(sqlite3_column_text(statemnet, 0)))!
                     usrInfo.completedDate.addObject(date)
                 }
             }
